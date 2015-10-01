@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[雾里看花，越看越远…]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://fycsb.github.io/"/>
+  <updated>2015-10-01T12:47:29.591Z</updated>
+  <id>http://fycsb.github.io/</id>
+  
+  <author>
+    <name><![CDATA[fycsb]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[随便写写]]></title>
+    <link href="http://fycsb.github.io/2015/10/01/hello-world/"/>
+    <id>http://fycsb.github.io/2015/10/01/hello-world/</id>
+    <published>2015-10-01T12:47:29.591Z</published>
+    <updated>2015-10-01T12:47:29.591Z</updated>
+    <content type="html"><![CDATA[<p>雾里看花，越看越远…</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>雾里看花，越看越远…</p>
+]]>
+    </summary>
+    
+      <category term="生活" scheme="http://fycsb.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="随笔" scheme="http://fycsb.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
