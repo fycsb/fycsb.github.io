@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[雾里看花，越看越远…]]></title>
+  <title><![CDATA[fycsb]]></title>
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://fycsb.github.io/"/>
-  <updated>2015-10-01T12:47:29.591Z</updated>
+  <updated>2015-10-23T12:52:44.479Z</updated>
   <id>http://fycsb.github.io/</id>
   
   <author>
@@ -15,10 +15,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Android读写权限的问题]]></title>
+    <link href="http://fycsb.github.io/2015/10/23/android_denied_permission/"/>
+    <id>http://fycsb.github.io/2015/10/23/android_denied_permission/</id>
+    <published>2015-10-23T12:52:44.479Z</published>
+    <updated>2015-10-23T12:52:44.479Z</updated>
+    <content type="html"><![CDATA[<p>今天在一部平板上面运行程序的时候，往/data/data/package/files目录下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了<br>‘’’<br>    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"><br>‘’’<br>这个权限了。查阅了一下官方的文档，内容如下：</uses-permission></p>
+<p>获取外部存储的权限<br>要向外部存储写入信息，您必须在您的宣示说明文件中请求 WRITE_EXTERNAL_STORAGE 权限。</p>
+<p><manifest ...=""><br>    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"><br>    …<br></uses-permission></manifest><br>注意： 目前，所有应用都可以读取外部存储，而无需特别的权限。 但这在将来版本中会进行更改。如果您的应用需要读取外部存储（但不向其写入信息），那么您将需要声明 READ_EXTERNAL_STORAGE 权限。 要确保您的应用继续正常工作，您应在更改生效前声明此权限。</p>
+<p><manifest ...=""><br>    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"><br>    …<br></uses-permission></manifest><br>但是，如果您的应用使用 WRITE_EXTERNAL_STORAGE 权限，那么它也隐含读取外部存储的权限。</p>
+<p>#####您无需任何权限，即可在内部存储中保存文件。 您的应用始终具有在其内部存储目录中进行读写的权限。</p>
+<p>后来想起之前似乎有一个权限是关于内部存储的<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.WRITE_INTERNAL_STORAGE"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>然后死马当活马医，就顺利运行了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天在一部平板上面运行程序的时候，往/data/data/package/files目录下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了<br>‘’’<br>    <]]>
+    </summary>
+    
+      <category term="android" scheme="http://fycsb.github.io/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[随便写写]]></title>
-    <link href="http://fycsb.github.io/2015/10/01/hello-world/"/>
-    <id>http://fycsb.github.io/2015/10/01/hello-world/</id>
-    <published>2015-10-01T12:47:29.591Z</published>
+    <link href="http://fycsb.github.io/2015/10/23/start/"/>
+    <id>http://fycsb.github.io/2015/10/23/start/</id>
+    <published>2015-10-23T11:38:53.987Z</published>
     <updated>2015-10-01T12:47:29.591Z</updated>
     <content type="html"><![CDATA[<p>雾里看花，越看越远…</p>
 ]]></content>
