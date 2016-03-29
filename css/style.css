@@ -460,6 +460,9 @@ a {
     padding: 10px 0;
     margin-left: 0;
   }
+  #container .diy {
+    text-align: center;
+  }
   #container #footer .footer-left {
     float: initial;
     margin-bottom: 10px;
@@ -2288,4 +2291,7 @@ pre .css ~ * .id {
   padding: 0;
   height: 100%;
   overflow: hidden;
+}
+.diy {
+  text-align: center;
 }

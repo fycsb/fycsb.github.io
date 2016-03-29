@@ -71,8 +71,8 @@
     <title><![CDATA[Android写内部存储权限的问题]]></title>
     <link href="http://fycsb.github.io/2016/03/28/android_denied_permission/"/>
     <id>http://fycsb.github.io/2016/03/28/android_denied_permission/</id>
-    <published>2016-03-28T12:40:24.465Z</published>
-    <updated>2016-03-28T12:40:24.465Z</updated>
+    <published>2016-03-28T12:40:24.650Z</published>
+    <updated>2016-03-28T12:40:24.650Z</updated>
     <content type="html"><![CDATA[<p>今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
 <p>这个权限了。查阅了一下官方的文档，内容如下：</p>
 <blockquote>
