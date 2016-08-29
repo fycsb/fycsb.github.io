@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://fycsb.github.io/2016/03/28/android_denied_permission/index.html">
 <meta property="og:site_name" content="fycsb">
 <meta property="og:description" content="今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了1&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_E">
-<meta property="og:updated_time" content="2016-03-28T12:40:24.650Z">
+<meta property="og:updated_time" content="2016-03-28T12:40:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android写内部存储权限的问题">
 <meta name="twitter:description" content="今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了1&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_E">
@@ -21,7 +21,7 @@
   
     <link rel="icon" href="/favicon.png">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <script>
   var _hmt = _hmt || [];
   (function() {
@@ -113,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/web/" style="font-size: 10px;">web</a>
+						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -174,7 +174,7 @@
   
     <div class="article-meta">
       <a href="/2016/03/28/android_denied_permission/" class="article-date">
-  	<time datetime="2016-03-28T12:40:24.650Z" itemprop="datePublished">2016-03-28</time>
+  	<time datetime="2016-03-28T12:40:24.000Z" itemprop="datePublished">2016-03-28</time>
 </a>
     </div>
   
@@ -207,14 +207,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
+        <p>今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:<span class="built_in">name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span>/&gt;</div></pre></td></tr></table></figure></p>
 <p>这个权限了。查阅了一下官方的文档，内容如下：</p>
 <blockquote>
-<p>要向外部存储写入信息，您必须在您的宣示说明文件中请求 WRITE_EXTERNAL_STORAGE 权限。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">manifest</span> <span class="attribute">...</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">uses-permission</span> <span class="attribute">android:name</span>=<span class="value">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="title">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>注意： 目前，所有应用都可以读取外部存储，而无需特别的权限。 但这在将来版本中会进行更改。如果您的应用需要读取外部存储（但不向其写入信息），那么您将需要声明 READ_EXTERNAL_STORAGE 权限。 要确保您的应用继续正常工作，您应在更改生效前声明此权限。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">manifest</span> <span class="attribute">...</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">uses-permission</span> <span class="attribute">android:name</span>=<span class="value">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="title">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>要向外部存储写入信息，您必须在您的宣示说明文件中请求 WRITE_EXTERNAL_STORAGE 权限。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">    ...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>注意： 目前，所有应用都可以读取外部存储，而无需特别的权限。 但这在将来版本中会进行更改。如果您的应用需要读取外部存储（但不向其写入信息），那么您将需要声明 READ_EXTERNAL_STORAGE 权限。 要确保您的应用继续正常工作，您应在更改生效前声明此权限。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">    ...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>但是，如果您的应用使用 WRITE_EXTERNAL_STORAGE 权限，那么它也隐含读取外部存储的权限。</p>
 <h5 id="您无需任何权限，即可在内部存储中保存文件。_您的应用始终具有在其内部存储目录中进行读写的权限。">您无需任何权限，即可在内部存储中保存文件。 您的应用始终具有在其内部存储目录中进行读写的权限。</h5></blockquote>
-<p>后来想起之前似乎有一个权限是关于内部存储的<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:<span class="property">name</span>=<span class="string">"android.permission.WRITE_INTERNAL_STORAGE"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>后来想起之前似乎有一个权限是关于内部存储的<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:<span class="built_in">name</span>=<span class="string">"android.permission.WRITE_INTERNAL_STORAGE"</span> /&gt;</div></pre></td></tr></table></figure></p>
 <p>然后死马当活马医，就顺利运行了。其实还是要怪那部定制过的平板…</p>
 
       
@@ -296,7 +296,7 @@
 
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
 
 <script>
@@ -312,8 +312,8 @@
 		open_in_new: false
 	}
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 
