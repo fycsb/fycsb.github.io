@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://fycsb.github.io/"/>
-  <updated>2019-02-10T16:31:53.388Z</updated>
+  <updated>2019-02-10T16:39:29.900Z</updated>
   <id>http://fycsb.github.io/</id>
   
   <author>
@@ -16,19 +16,21 @@
   
   <entry>
     <title><![CDATA[备份一下常用的仓库地址]]></title>
-    <link href="http://fycsb.github.io/2016/03/28/android_denied_permission/"/>
-    <id>http://fycsb.github.io/2016/03/28/android_denied_permission/</id>
+    <link href="http://fycsb.github.io/2016/03/28/aliyun_gradle_maven/"/>
+    <id>http://fycsb.github.io/2016/03/28/aliyun_gradle_maven/</id>
     <published>2016-03-28T12:40:24.000Z</published>
-    <updated>2019-02-10T16:31:53.388Z</updated>
+    <updated>2019-02-10T16:39:29.900Z</updated>
     <content type="html"><![CDATA[<p>你懂得的上网有时候抽风。备份一下。。。</p>
-<h4 id="Gradle">Gradle</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public/'</span>&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public/'</span>&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="Maven">Maven</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>阿里云公共仓库<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
+<h3 id="Gradle">Gradle</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public/'</span>&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public/'</span>&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Maven">Maven</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>阿里云公共仓库<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[<p>你懂得的上网有时候抽风。备份一下。。。</p>
-<h4 id="Gradle">Gradle</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">]]>
+<h3 id="Gradle">Gradle</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">]]>
     </summary>
     
-      <category term="小笔记" scheme="http://fycsb.github.io/tags/%E5%B0%8F%E7%AC%94%E8%AE%B0/"/>
+      <category term="gradle" scheme="http://fycsb.github.io/tags/gradle/"/>
+    
+      <category term="maven" scheme="http://fycsb.github.io/tags/maven/"/>
     
   </entry>
   
