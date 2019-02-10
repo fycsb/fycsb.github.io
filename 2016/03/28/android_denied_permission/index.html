@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Android写内部存储权限的问题 | fycsb</title>
+  <title>备份一下常用的仓库地址 | fycsb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了1&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_E">
+  <meta name="description" content="你懂得的上网有时候抽风。备份一下。。。
+Gradle123456789101112buildscript &amp;#123;    repositories &amp;#123;        maven&amp;#123; url &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;&amp;#125;    &amp;#125;&amp;#125;allprojects &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android写内部存储权限的问题">
+<meta property="og:title" content="备份一下常用的仓库地址">
 <meta property="og:url" content="http://fycsb.github.io/2016/03/28/android_denied_permission/index.html">
 <meta property="og:site_name" content="fycsb">
-<meta property="og:description" content="今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了1&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_E">
-<meta property="og:updated_time" content="2016-03-28T12:40:24.000Z">
+<meta property="og:description" content="你懂得的上网有时候抽风。备份一下。。。
+Gradle123456789101112buildscript &amp;#123;    repositories &amp;#123;        maven&amp;#123; url &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;&amp;#125;    &amp;#125;&amp;#125;allprojects &amp;#123;">
+<meta property="og:updated_time" content="2019-02-10T16:31:53.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android写内部存储权限的问题">
-<meta name="twitter:description" content="今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了1&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_E">
+<meta name="twitter:title" content="备份一下常用的仓库地址">
+<meta name="twitter:description" content="你懂得的上网有时候抽风。备份一下。。。
+Gradle123456789101112buildscript &amp;#123;    repositories &amp;#123;        maven&amp;#123; url &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;&amp;#125;    &amp;#125;&amp;#125;allprojects &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="fycsb" type="application/atom+xml">
   
@@ -113,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
+						<a href="/tags/小笔记/" style="font-size: 10px;">小笔记</a>
 					</div>
 				</section>
 				
@@ -187,7 +190,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android写内部存储权限的问题
+      备份一下常用的仓库地址
     </h1>
   
 
@@ -196,7 +199,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小笔记/">小笔记</a></li></ul>
 	</div>
 
         
@@ -207,36 +210,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在一部平板上面运行程序的时候，往/data/data/package/files目录（即getFilesDir()方法）下写文件的时候，总是抛出Denied Permission的异常，很明显这是权限的问题。但是我查看了AndroidManifest.xml文件，下面添加了<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:<span class="built_in">name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span>/&gt;</div></pre></td></tr></table></figure></p>
-<p>这个权限了。查阅了一下官方的文档，内容如下：</p>
-<blockquote>
-<p>要向外部存储写入信息，您必须在您的宣示说明文件中请求 WRITE_EXTERNAL_STORAGE 权限。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">    ...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>注意： 目前，所有应用都可以读取外部存储，而无需特别的权限。 但这在将来版本中会进行更改。如果您的应用需要读取外部存储（但不向其写入信息），那么您将需要声明 READ_EXTERNAL_STORAGE 权限。 要确保您的应用继续正常工作，您应在更改生效前声明此权限。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">...</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_EXTERNAL_STORAGE"</span> /&gt;</span></div><div class="line">    ...</div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>但是，如果您的应用使用 WRITE_EXTERNAL_STORAGE 权限，那么它也隐含读取外部存储的权限。</p>
-<h5 id="您无需任何权限，即可在内部存储中保存文件。_您的应用始终具有在其内部存储目录中进行读写的权限。">您无需任何权限，即可在内部存储中保存文件。 您的应用始终具有在其内部存储目录中进行读写的权限。</h5></blockquote>
-<p>后来想起之前似乎有一个权限是关于内部存储的<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:<span class="built_in">name</span>=<span class="string">"android.permission.WRITE_INTERNAL_STORAGE"</span> /&gt;</div></pre></td></tr></table></figure></p>
-<p>然后死马当活马医，就顺利运行了。其实还是要怪那部定制过的平板…</p>
-
+        <p>你懂得的上网有时候抽风。备份一下。。。</p>
+<h4 id="Gradle">Gradle</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public/'</span>&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public/'</span>&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="Maven">Maven</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>aliyunmaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>阿里云公共仓库<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
     
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2016/03/29/pit_gprinter_sdk/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          填坑小记
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
@@ -260,7 +242,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="android_denied_permission" data-title="Android写内部存储权限的问题" data-url="http://fycsb.github.io/2016/03/28/android_denied_permission/"></div>
+	<div class="ds-thread" data-thread-key="android_denied_permission" data-title="备份一下常用的仓库地址" data-url="http://fycsb.github.io/2016/03/28/android_denied_permission/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -285,7 +267,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 fycsb
+    		&copy; 2019 fycsb
     	</div>
       	<div class="footer-right">
       		
